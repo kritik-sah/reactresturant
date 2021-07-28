@@ -13,7 +13,7 @@ const Resturant = () => {
 
 
     const [menuData, setMenuData] = useState(Menu);
-    const [menuList, setmenuList] = useState(uniqueList);
+    const [menuList, setMenuList] = useState(uniqueList);
 
     const filterItem = (category) => {
         if (category.toLowerCase() === "all"){
@@ -28,7 +28,7 @@ const Resturant = () => {
 
     return (
         <>
-            <Navbar filterItem={filterItem} menuList={menuList} />
+            <Navbar filterItem={filterItem} menuList={menuList} setMenuList={setMenuList}/>
             <MenuCard menuData={menuData}/>
         </>
     )
